@@ -15,4 +15,18 @@ describe('Tic Tac Toe game testing',()=>{
         //compare
         expect(player).toStrictEqual(expectedResult);
     })
+    test('When a player plays, switch turns',
+    ()=>{
+        //setup
+        const newGame = new TicTacToe();
+        let cell = 7;
+
+        //act
+        let firstTurn = newGame.getTurn();
+        newGame.fillCell(cell);
+        let secondTurn = newGame.getTurn();
+
+        //compare
+        expect(firstTurn).toStrictEqual(!secondTurn);
+    })
 })
