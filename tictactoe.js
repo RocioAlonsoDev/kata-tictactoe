@@ -16,12 +16,17 @@ class TicTacToe {
         this.turn=!this.turn;
     }
     fillCell(cell){
-        if(this.turn){
-            this.playerX.push(cell);
+        if(this.playerX.includes(cell) || this.playerO.includes(cell)){
+           
         }else{
-            this.playerO.push(cell);
+            if(this.turn){
+                this.playerX.push(cell);
+            }else{
+                this.playerO.push(cell);
+            }
+            this.setTurn();
         }
-        this.setTurn();
+        
     }
 }
 
