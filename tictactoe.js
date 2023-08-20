@@ -1,9 +1,13 @@
 class TicTacToe {
     playerX = [];
+    playerO = [];
     turn = true;
 
     getPlayerX(){
         return this.playerX;
+    }
+    getPlayerO(){
+        return this.playerO;
     }
     getTurn(){
         return this.turn;
@@ -12,7 +16,11 @@ class TicTacToe {
         this.turn=!this.turn;
     }
     fillCell(cell){
-        this.playerX.push(cell);
+        if(this.turn){
+            this.playerX.push(cell);
+        }else{
+            this.playerO.push(cell);
+        }
         this.setTurn();
     }
 }
