@@ -1,4 +1,4 @@
-class TicTacToe{
+class TicTacToe {
     playerX = [];
     turn = true;
 

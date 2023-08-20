@@ -29,4 +29,21 @@ describe('Tic Tac Toe game testing',()=>{
         //compare
         expect(firstTurn).toStrictEqual(!secondTurn);
     })
+    test('When cell 2 and 3 are selected, they are assigned to playerX and playerO respectively',
+    ()=>{
+        //setup
+        const newGame = new TicTacToe();
+
+        //act
+        newGame.fillCell(2);
+        newGame.fillCell(3);
+        let playerX = newGame.getPlayerX();        
+        let playerO = newGame.getPlayerO();
+        expectedResultX = [2];
+        expectedResultO = [3];
+
+        //compare
+        expect(playerX).toStrictEqual(expectedResultX);
+        expect(playerO).toStrictEqual(expectedResultO);
+    })
 })
